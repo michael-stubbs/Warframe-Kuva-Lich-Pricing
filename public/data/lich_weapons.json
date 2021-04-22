@@ -1,0 +1,131 @@
+[
+      {
+        "url_name": "kuva_drakgoon",
+        "id": "5e9855993d9f64005cd702e6",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_drakgoon.18ccf386cfd24a1404982d492abf14e2.128x128.png",
+        "icon": "icons/en/kuva_drakgoon.18ccf386cfd24a1404982d492abf14e2.png",
+        "item_name": "Kuva Drakgoon"
+      },
+      {
+        "url_name": "kuva_brakk",
+        "id": "5e9855993d9f64005cd702e9",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_brakk.a3f72cf490836be2a632960663454ae7.128x128.png",
+        "icon": "icons/en/kuva_brakk.a3f72cf490836be2a632960663454ae7.png",
+        "item_name": "Kuva Brakk"
+      },
+      {
+        "url_name": "kuva_bramma",
+        "id": "5e98559a3d9f64005cd702eb",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_bramma.eaf6bd5d4a8f1413764771719ca2cc27.128x128.png",
+        "icon": "icons/en/kuva_bramma.eaf6bd5d4a8f1413764771719ca2cc27.png",
+        "item_name": "Kuva Bramma"
+      },
+      {
+        "url_name": "kuva_chakkhurr",
+        "id": "5e9855973d9f64005cd702e3",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_chakkhurr.a6dd9f9351a16da48402612663ea86da.128x128.png",
+        "icon": "icons/en/kuva_chakkhurr.a6dd9f9351a16da48402612663ea86da.png",
+        "item_name": "Kuva Chakkhurr"
+      },
+      {
+        "url_name": "kuva_karak",
+        "id": "5e9855983d9f64005cd702e4",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_karak.f2894fbcac608f83a75e4d91c13af406.128x128.png",
+        "icon": "icons/en/kuva_karak.f2894fbcac608f83a75e4d91c13af406.png",
+        "item_name": "Kuva Karak"
+      },
+      {
+        "url_name": "kuva_twin_stubbas",
+        "id": "5e9855983d9f64005cd702e5",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_twin_stubbas.2b7e09ca3fbf0647c8f9b170dba34546.128x128.png",
+        "icon": "icons/en/kuva_twin_stubbas.2b7e09ca3fbf0647c8f9b170dba34546.png",
+        "item_name": "Kuva Twin Stubbas"
+      },
+      {
+        "url_name": "kuva_nukor",
+        "id": "5e9855993d9f64005cd702e7",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_nukor.0a0d118ccf2b40a6323c8be28fed7cd8.128x128.png",
+        "icon": "icons/en/kuva_nukor.0a0d118ccf2b40a6323c8be28fed7cd8.png",
+        "item_name": "Kuva Nukor"
+      },
+      {
+        "url_name": "kuva_tonkor",
+        "id": "5e9855993d9f64005cd702e8",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_tonkor.bba3f83b859708221b5c374429d1d540.128x128.png",
+        "icon": "icons/en/kuva_tonkor.bba3f83b859708221b5c374429d1d540.png",
+        "item_name": "Kuva Tonkor"
+      },
+      {
+        "url_name": "kuva_kraken",
+        "id": "5e98559a3d9f64005cd702ea",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_kraken.0989fa722c36b1bff23be1c9225bca3c.128x128.png",
+        "icon": "icons/en/kuva_kraken.0989fa722c36b1bff23be1c9225bca3c.png",
+        "item_name": "Kuva Kraken"
+      },
+      {
+        "url_name": "kuva_hind",
+        "id": "5e9855963d9f64005cd702dc",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_hind.14f490c8054e9d01d1b4b4126a7ddd8f.128x128.png",
+        "icon": "icons/en/kuva_hind.14f490c8054e9d01d1b4b4126a7ddd8f.png",
+        "item_name": "Kuva Hind"
+      },
+      {
+        "url_name": "kuva_ayanga",
+        "id": "5e9855963d9f64005cd702dd",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_ayanga.118c00ee08d769b527848c29d635af80.128x128.png",
+        "icon": "icons/en/kuva_ayanga.118c00ee08d769b527848c29d635af80.png",
+        "item_name": "Kuva Ayanga"
+      },
+      {
+        "url_name": "kuva_seer",
+        "id": "5e9855963d9f64005cd702de",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_seer.9b0112c7f74af198e75031ebded81247.128x128.png",
+        "icon": "icons/en/kuva_seer.9b0112c7f74af198e75031ebded81247.png",
+        "item_name": "Kuva Seer"
+      },
+      {
+        "url_name": "kuva_shildeg",
+        "id": "5e9855973d9f64005cd702df",
+        "icon_format": "port",
+        "thumb": "icons/en/thumbs/kuva_shildeg.47590eb4b2c5287e2439b854597ffbb5.128x128.png",
+        "icon": "icons/en/kuva_shildeg.47590eb4b2c5287e2439b854597ffbb5.png",
+        "item_name": "Kuva Shildeg"
+      },
+      {
+        "url_name": "kuva_quartakk",
+        "id": "5e9855973d9f64005cd702e0",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_quartakk.49e599c43b41eebbd22d9f7f6b772ffb.128x128.png",
+        "icon": "icons/en/kuva_quartakk.49e599c43b41eebbd22d9f7f6b772ffb.png",
+        "item_name": "Kuva Quartakk"
+      },
+      {
+        "url_name": "kuva_kohm",
+        "id": "5e9855973d9f64005cd702e1",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_kohm.d1438d533b4ecd16d72e3535ce2f86e1.128x128.png",
+        "icon": "icons/en/kuva_kohm.d1438d533b4ecd16d72e3535ce2f86e1.png",
+        "item_name": "Kuva Kohm"
+      },
+      {
+        "url_name": "kuva_ogris",
+        "id": "5e9855973d9f64005cd702e2",
+        "icon_format": "land",
+        "thumb": "icons/en/thumbs/kuva_ogris.689c9b3b300f77f0c3dc3825130a6327.128x128.png",
+        "icon": "icons/en/kuva_ogris.689c9b3b300f77f0c3dc3825130a6327.png",
+        "item_name": "Kuva Ogris"
+      }
+    ]
+  

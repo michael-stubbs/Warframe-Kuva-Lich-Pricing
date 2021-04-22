@@ -1,0 +1,80 @@
+[
+      {
+        "animation_format": "land",
+        "id": "5e98548a3d9f64004f9136bb",
+        "animation": "animations/vengeful_charge.63f9a08ca42b89297105643a34741244.gif",
+        "item_name": "Vengeful Charge Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_charge.68e07295ec11cdb303755a9f26e87f0e.128x128.png",
+        "url_name": "vengeful_charge",
+        "icon_format": "land",
+        "element": "electricity",
+        "icon": "icons/en/vengeful_charge.68e07295ec11cdb303755a9f26e87f0e.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e9854b93d9f64004f9136bd",
+        "animation": "animations/vengeful_shockwave.971437bf48dec307ed268285b8798228.gif",
+        "item_name": "Vengeful Shockwave Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_shockwave.6020e14eb5e9516d4bc6ccf5023c864c.128x128.png",
+        "url_name": "vengeful_shockwave",
+        "icon_format": "port",
+        "element": "impact",
+        "icon": "icons/en/vengeful_shockwave.6020e14eb5e9516d4bc6ccf5023c864c.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e9854ec3d9f64004f9136bf",
+        "animation": "animations/vengeful_trickster.f2d6cce916a7eb097ef55719a3d0baac.gif",
+        "item_name": "Vengeful Trickster Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_trickster.3b85b181837a55263dbd3e1a529c39cc.128x128.png",
+        "url_name": "vengeful_trickster",
+        "icon_format": "port",
+        "element": "radiation",
+        "icon": "icons/en/vengeful_trickster.3b85b181837a55263dbd3e1a529c39cc.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e98545e3d9f64004f9136b9",
+        "animation": "animations/vengeful_pull.a91a301b224f35abe3c4fe5fbb97e5ce.gif",
+        "item_name": "Vengeful Pull Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_pull.e80eed69fd9cc1995a514df3a4e64596.128x128.png",
+        "url_name": "vengeful_pull",
+        "icon_format": "port",
+        "element": "magnetic",
+        "icon": "icons/en/vengeful_pull.e80eed69fd9cc1995a514df3a4e64596.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e9854a23d9f64004f9136bc",
+        "animation": "animations/vengeful_chill.01a762baf827ac54059c00b3665a549f.gif",
+        "item_name": "Vengeful Chill Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_chill.357327ef4c8de2efee1873926aeb47aa.128x128.png",
+        "url_name": "vengeful_chill",
+        "icon_format": "land",
+        "element": "cold",
+        "icon": "icons/en/vengeful_chill.357327ef4c8de2efee1873926aeb47aa.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e9854ce3d9f64004f9136be",
+        "animation": "animations/vengeful_toxin.55b4aee60b0279acefb82f92d7ddc5df.gif",
+        "item_name": "Vengeful Toxin Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_toxin.4b0f7027e99675f64183a0abadf28c5e.128x128.png",
+        "url_name": "vengeful_toxin",
+        "icon_format": "land",
+        "element": "toxin",
+        "icon": "icons/en/vengeful_toxin.4b0f7027e99675f64183a0abadf28c5e.png"
+      },
+      {
+        "animation_format": "land",
+        "id": "5e98546d3d9f64004f9136ba",
+        "animation": "animations/vengeful_flame.9d819d5e4f54c25551b3e8cfa9f9a002.gif",
+        "item_name": "Vengeful Flame Ephemera",
+        "thumb": "icons/en/thumbs/vengeful_flame.1c2faa83c219e6d6699524495b578d7f.128x128.png",
+        "url_name": "vengeful_flame",
+        "icon_format": "port",
+        "element": "heat",
+        "icon": "icons/en/vengeful_flame.1c2faa83c219e6d6699524495b578d7f.png"
+      }
+    ]
+  

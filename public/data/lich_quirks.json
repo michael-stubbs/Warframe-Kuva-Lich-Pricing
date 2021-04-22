@@ -1,0 +1,136 @@
+[
+      {
+        "id": "5e9855a43d9f6400697e895c",
+        "group": "default",
+        "description": "The lich will retreat after kneeling down and without stabbing",
+        "item_name": "Poor Sense of Balance",
+        "url_name": "poor_sense_of_balance"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8961",
+        "group": "default",
+        "description": "Talks when the player is on fire",
+        "item_name": "Pyromaniac",
+        "url_name": "pyromaniac"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8963",
+        "group": "default",
+        "description": "Makes comments when the player turns invisible",
+        "item_name": "Bloodhound",
+        "url_name": "bloodhound"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8964",
+        "group": "default",
+        "description": "Is afraid of Feral Kubrows and Drahks",
+        "item_name": "Fear of Kubrows",
+        "url_name": "fear_of_kubrows"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8966",
+        "group": "default",
+        "description": "Stays on the ground level of the map. Avoids going up stairs and catwalks",
+        "item_name": "Prone to Vertigo",
+        "url_name": "prone_to_vertigo"
+      },
+      {
+        "id": "5e9855a43d9f6400697e895d",
+        "group": "default",
+        "description": "Can leave the mission unexpectedly",
+        "item_name": "Deserter",
+        "url_name": "deserter"
+      },
+      {
+        "id": "5e9855a43d9f6400697e895f",
+        "group": "default",
+        "description": "Reward tax is higher than usual, allowing the Lich to steal more rewards",
+        "item_name": "Trophy Hunter",
+        "url_name": "trophy_hunter"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8960",
+        "group": "default",
+        "description": "Is afraid of the player's Operator",
+        "item_name": "Fear of Children",
+        "url_name": "fear_of_children"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8962",
+        "group": "top",
+        "description": "Doesn't have any quirks",
+        "item_name": "None",
+        "url_name": "none"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8965",
+        "group": "default",
+        "description": "Talks about getting a snack after appearing on a mission",
+        "item_name": "Always Hungry",
+        "url_name": "always_hungry"
+      },
+      {
+        "id": "5e9855a43d9f6400697e8967",
+        "group": "default",
+        "description": "Attacks allied Grineer troops; prevents the conversion of nearby Grineer into thralls",
+        "item_name": "Paranoid",
+        "url_name": "paranoid"
+      },
+      {
+        "id": "5e9855a53d9f6400697e8968",
+        "group": "default",
+        "description": "Talks about being allergic to nature",
+        "item_name": "Allergic to Nature",
+        "url_name": "allergic_to_nature"
+      },
+      {
+        "id": "5e9855a53d9f6400697e8969",
+        "group": "default",
+        "description": "Talks about how beautiful they are after appearing on a mission",
+        "item_name": "Vain",
+        "url_name": "vain"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896a",
+        "group": "default",
+        "description": "Talks about hating Infested when spawned on Infested tilesets",
+        "item_name": "Hatred of Infested",
+        "url_name": "hatred_of_infested"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896b",
+        "group": "default",
+        "description": "Upon spawning on a ship, sometimes stands frightened and does not attack first",
+        "item_name": "Fear of Space Travel",
+        "url_name": "fear_of_space_travel"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896c",
+        "group": "default",
+        "description": "Is afraid of fighting without backup",
+        "item_name": "Fear of Being Alone",
+        "url_name": "fear_of_being_alone"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896d",
+        "group": "default",
+        "description": "Can leave the mission at low health",
+        "item_name": "Coward",
+        "url_name": "coward"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896e",
+        "group": "default",
+        "description": "Talks about preferring to fight alone",
+        "item_name": "Loner",
+        "url_name": "loner"
+      },
+      {
+        "id": "5e9855a53d9f6400697e896f",
+        "group": "default",
+        "description": "Talks about hating Corpus when spawned on Corpus tilesets",
+        "item_name": "Hatred of Corpus",
+        "url_name": "hatred_of_corpus"
+      }
+    ]
+  

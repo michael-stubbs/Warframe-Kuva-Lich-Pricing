@@ -1,0 +1,177 @@
+<!-- TODO: Edit card size and dimensions to work on mobile.
+          Beat BS5 into submission and make it responsive overall. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="Description"
+      content="Warframe Kuva Lich weapon price check and auction lists."
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
+      defer
+    ></script>
+    <script src="javascript/scripts.js" defer></script>
+    <title>Kuva Lich Prices</title>
+  </head>
+
+  <body>
+    <div class="searchBody container-flex shadow rounded">
+      <img
+        src="images/icons7-warframe.svg"
+        width="150"
+        height="150"
+        class="logo"
+        alt="Warframe Icon"
+      />
+      <h1 class="title">Kuva Lich Pricing</h1>
+      <h2 class="subhead">
+        Data sourced from <a href="https://warframe.market/">warframe.market</a>
+      </h2>
+      <form action="/" method="POST">
+        <div class="row">
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select"
+              id="weapon-type"
+              aria-label="Default select example"
+              name="weapon"
+            ></select>
+          </div>
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select element-type"
+              aria-label="Default select example"
+              name="element"
+              autocomplete="off"
+            >
+              <option selected value="">Element</option>
+              <option>Impact</option>
+              <option>Heat</option>
+              <option>Cold</option>
+              <option>Electricity</option>
+              <option>Toxin</option>
+              <option>Magnetic</option>
+              <option>Radiation</option>
+            </select>
+          </div>
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select"
+              id="ephemera-type"
+              aria-label="Default select example"
+              name="ephemera"
+            >
+              <option selected value="">Ephemera?</option>
+              <option value="true">With Ephemera</option>
+              <option value="false">Without Ephemera</option>
+            </select>
+          </div>
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select"
+              id="quirk-type"
+              aria-label="Default select example"
+              name="quirk"
+            ></select>
+          </div>
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select platform-type"
+              aria-label="Default select example"
+              name="platform"
+              autocomplete="off"
+              required
+            >
+              <option selected disabled value="pc">Platform</option>
+              <option>PC</option>
+              <option>XBOX</option>
+              <option>PS4</option>
+              <option>Switch</option>
+            </select>
+          </div>
+          <div class="col col-lg-6 col-sm-12">
+            <select
+              class="form-select auction-type"
+              aria-label="Default select example"
+              name="auctiontype"
+              autocomplete="off"
+            >
+              <option selected value="">Auction Type</option>
+              <option value="direct">Buyout</option>
+              <option value="with">Bid</option>
+            </select>
+          </div>
+
+          <div class="col col-lg-12 col-sm-12">
+            <select
+              class="form-select sort-type"
+              aria-label="Default select example"
+              name="sorting"
+              autocomplete="off"
+            >
+              <option selected value="">Sort By</option>
+              <option value="price_desc">Price (Descending)</option>
+              <option value="price_asc">Price (Ascending)</option>
+              <option value="damage_desc">Damage (Descending)</option>
+              <option value="damage_asc">Damage (Ascending)</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg search-button">
+          Search Auctions
+        </button>
+      </form>
+    </div>
+    <footer class="footer mt-auto py-6">
+      <div class="row">
+        <div class="col col-lg-2 col-md-0 col-sm-0"></div>
+        <div class="col col-lg-8 col-md-12 col-sm-12">
+          <p class="copyright text-muted">
+            Digital Extremes Ltd, Warframe and the logo Warframe are registered
+            trademarks. All rights are reserved worldwide. This is a fansite and
+            has no official link with Digital Extremes Ltd or Warframe.
+          </p>
+        </div>
+        <div class="col col-lg-2 col-md-0 col-sm-0"></div>
+      </div>
+
+      <div class="btn-group" role="group" aria-label="Button group">
+        <a
+          href=""
+          class="btn btn-outline-success"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >Github</a
+        >
+        <a
+          href="https://twitter.com/__stubbs__"
+          class="btn btn-outline-success"
+          tabindex="-1"
+          role="button"
+          aria-disabled="true"
+          >Twitter</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
