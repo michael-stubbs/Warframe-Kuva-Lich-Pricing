@@ -27,5 +27,6 @@ function formAPIString(postedJSON) {
   return [apiLink, platformHead];
 }
 
+//exports vs module.exports doesn't seem to matter
 exports.omitBlanks = omitBlanks;
 exports.formAPIString = formAPIString;
