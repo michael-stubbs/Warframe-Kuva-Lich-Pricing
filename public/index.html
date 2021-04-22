@@ -19,7 +19,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.5.4/umd/popper.min.js"
       defer
@@ -28,118 +28,121 @@
       src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.min.js"
       defer
     ></script>
-    <script src="javascript/scripts.js" defer></script>
+    <script src="/javascript/scripts.js" defer></script>
     <title>Kuva Lich Prices</title>
   </head>
 
   <body>
-    <div class="searchBody container-flex shadow rounded">
-      <img
-        src="images/icons7-warframe.svg"
-        width="150"
-        height="150"
-        class="logo"
-        alt="Warframe Icon"
-      />
-      <h1 class="title">Kuva Lich Pricing</h1>
-      <h2 class="subhead">
-        Data sourced from <a href="https://warframe.market/">warframe.market</a>
-      </h2>
-      <form action="/" method="POST">
-        <div class="row">
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select"
-              id="weapon-type"
-              aria-label="Default select example"
-              name="weapon"
-            ></select>
-          </div>
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select element-type"
-              aria-label="Default select example"
-              name="element"
-              autocomplete="off"
-            >
-              <option selected value="">Element</option>
-              <option>Impact</option>
-              <option>Heat</option>
-              <option>Cold</option>
-              <option>Electricity</option>
-              <option>Toxin</option>
-              <option>Magnetic</option>
-              <option>Radiation</option>
-            </select>
-          </div>
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select"
-              id="ephemera-type"
-              aria-label="Default select example"
-              name="ephemera"
-            >
-              <option selected value="">Ephemera?</option>
-              <option value="true">With Ephemera</option>
-              <option value="false">Without Ephemera</option>
-            </select>
-          </div>
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select"
-              id="quirk-type"
-              aria-label="Default select example"
-              name="quirk"
-            ></select>
-          </div>
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select platform-type"
-              aria-label="Default select example"
-              name="platform"
-              autocomplete="off"
-              required
-            >
-              <option selected disabled value="pc">Platform</option>
-              <option>PC</option>
-              <option>XBOX</option>
-              <option>PS4</option>
-              <option>Switch</option>
-            </select>
-          </div>
-          <div class="col col-lg-6 col-sm-12">
-            <select
-              class="form-select auction-type"
-              aria-label="Default select example"
-              name="auctiontype"
-              autocomplete="off"
-            >
-              <option selected value="">Auction Type</option>
-              <option value="direct">Buyout</option>
-              <option value="with">Bid</option>
-            </select>
+    <div class="searchWrapper">
+      <div class="searchBody container-flex shadow rounded">
+        <img
+          src="images/icons7-warframe.svg"
+          width="150"
+          height="150"
+          class="logo"
+          alt="Warframe Icon"
+        />
+        <h1 class="title">Kuva Lich Pricing</h1>
+        <h2 class="subhead">
+          Data sourced from
+          <a href="https://warframe.market/">warframe.market</a>
+        </h2>
+        <form action="/" method="POST">
+          <div class="row">
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select"
+                id="weapon-type"
+                aria-label="Default select example"
+                name="weapon"
+              ></select>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select element-type"
+                aria-label="Default select example"
+                name="element"
+                autocomplete="off"
+              >
+                <option selected value="">Element</option>
+                <option>Impact</option>
+                <option>Heat</option>
+                <option>Cold</option>
+                <option>Electricity</option>
+                <option>Toxin</option>
+                <option>Magnetic</option>
+                <option>Radiation</option>
+              </select>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select"
+                id="ephemera-type"
+                aria-label="Default select example"
+                name="ephemera"
+              >
+                <option selected value="">Ephemera?</option>
+                <option value="true">With Ephemera</option>
+                <option value="false">Without Ephemera</option>
+              </select>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select"
+                id="quirk-type"
+                aria-label="Default select example"
+                name="quirk"
+              ></select>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select platform-type"
+                aria-label="Default select example"
+                name="platform"
+                autocomplete="off"
+                required
+              >
+                <option selected disabled value="pc">Platform</option>
+                <option>PC</option>
+                <option>XBOX</option>
+                <option>PS4</option>
+                <option>Switch</option>
+              </select>
+            </div>
+            <div class="col col-lg-6 col-sm-12">
+              <select
+                class="form-select auction-type"
+                aria-label="Default select example"
+                name="auctiontype"
+                autocomplete="off"
+              >
+                <option selected value="">Auction Type</option>
+                <option value="direct">Buyout</option>
+                <option value="with">Bid</option>
+              </select>
+            </div>
+
+            <div class="col col-lg-12 col-sm-12">
+              <select
+                class="form-select sort-type"
+                aria-label="Default select example"
+                name="sorting"
+                autocomplete="off"
+              >
+                <option selected value="">Sort By</option>
+                <option value="price_desc">Price (Descending)</option>
+                <option value="price_asc">Price (Ascending)</option>
+                <option value="damage_desc">Damage (Descending)</option>
+                <option value="damage_asc">Damage (Ascending)</option>
+              </select>
+            </div>
           </div>
 
-          <div class="col col-lg-12 col-sm-12">
-            <select
-              class="form-select sort-type"
-              aria-label="Default select example"
-              name="sorting"
-              autocomplete="off"
-            >
-              <option selected value="">Sort By</option>
-              <option value="price_desc">Price (Descending)</option>
-              <option value="price_asc">Price (Ascending)</option>
-              <option value="damage_desc">Damage (Descending)</option>
-              <option value="damage_asc">Damage (Ascending)</option>
-            </select>
-          </div>
-        </div>
-
-        <button type="submit" class="btn btn-primary btn-lg search-button">
-          Search Auctions
-        </button>
-      </form>
+          <button type="submit" class="btn btn-primary btn-lg search-button">
+            Search Auctions
+          </button>
+        </form>
+      </div>
     </div>
     <footer class="footer mt-auto py-6">
       <div class="row">
@@ -156,7 +159,7 @@
 
       <div class="btn-group" role="group" aria-label="Button group">
         <a
-          href=""
+          href="https://github.com/michael-stubbs/Warframe-Kuva-Lich-Pricing"
           class="btn btn-outline-success"
           tabindex="-1"
           role="button"

@@ -18,7 +18,10 @@ body {
 }
 
 .searchBody {
-  margin: 15vh 20vh;
+  /* margin: 15vh 20vh;*/
+  width: 60%;
+  margin: auto;
+  margin-top: 6rem;
   padding: 2rem;
   background: rgb(148, 187, 233);
   background: radial-gradient(
@@ -26,6 +29,10 @@ body {
     rgba(148, 187, 233, 1) 65%,
     rgba(238, 174, 202, 1) 100%
   );
+}
+
+.searchWrapper {
+  min-height: 79vh;
 }
 
 .col {
