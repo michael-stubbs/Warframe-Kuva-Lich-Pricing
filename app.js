@@ -22,13 +22,12 @@ app.listen(port, () => {
 app.post("/", async function (req, res) {
   let generatedGetString = process.formAPIString(req.body);
   await callAPI(generatedGetString);
-  // res.sendFile(path.join(__dirname + "/public/results.html"));
   res.send(compiledFunction());
 });
 
 const compiledFunction = pug.compileFile("views/results.pug");
 
-// This wouldn't work as a module. I still have no idea why results would export before it was written.
+// This wouldn't work as a module. Results would export before async finished.
 async function callAPI(fullrequest) {
   try {
     await got(fullrequest[0], {
