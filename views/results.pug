@@ -15,7 +15,7 @@ head
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
         h1.title Price Results 
-        .resultsTable
+        table.resultsTable.table.striped
             thead
                 tr
                     th(scope='col') Weapon
@@ -25,8 +25,25 @@ head
                     th(scope='col') Quirk
                     th(scope='col') Price
             tbody
-            //- accept JSON as variable passed into compile(), padd through tr/td
-            //- https://stackoverflow.com/questions/5204905/dynamic-html-pages-with-jade-nodejs-express
+                each i in data 
+                    tr 
+                        - let wepname = i.item.weapon_url_name.replace(/_/g, ' ');
+                        - wepname = wepname.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+                        th= wepname
+                        th= i.item.damage
+                        th= i.item.element
+                        th= i.item.having_ephemera
+                        if i.item.quirk === "none" 
+                            th= ""
+                        else
+                            th= i.item.quirk 
+                        th= i.starting_price + " Plat"
+
+//- ul  
+//-     each i in data
+//-         li= i.item.weapon_url_name
+//-         li= i.item.damage
+//-         li= i.item.element
 
 
 
