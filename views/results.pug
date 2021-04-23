@@ -12,6 +12,22 @@ head
     script(src='/javascript/results.js' defer='')
     title Kuva Lich Prices
 
+mixin modalButton(owner, wepname, price)
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#staticBackdrop') /w
+    #staticBackdrop.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdropLabel' aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header
+                    h5#staticBackdropLabel.modal-title Whisper Seller
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                #copyBody.modal-body
+                    | /w #{owner} Hi, I would like to buy your #{wepname} for #{price} plat. (warframe.market)
+                .modal-footer
+                    button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                    button#copyButton.btn.btn-primary(type='button') Copy
+
+
+
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
         h1.title Price Results 
@@ -24,22 +40,26 @@ head
                     th(scope='col') Ephemera
                     th(scope='col') Quirk
                     th(scope='col') Price
+                    th(scope='col') Whisper
             tbody
                 each i in data 
                     tr 
                         - let wepname = i.item.weapon_url_name.replace(/_/g, ' ');
                         - wepname = wepname.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
-                        th= wepname
-                        th= i.item.damage
+                        td= wepname
+                        td= i.item.damage
                         - let element = i.item.element
                         - element = element.charAt(0).toUpperCase() + element.slice(1);
-                        th= element
-                        th= i.item.having_ephemera
+                        td= element
+                        td= i.item.having_ephemera
                         if i.item.quirk === "none" 
-                            th= ""
+                            td= ""
                         else
-                            th= i.item.quirk 
-                        th= i.starting_price + " Plat"
+                            td= i.item.quirk 
+                        td= i.starting_price + " Plat" 
+                        td
+                            +modalButton(i.owner.ingame_name, wepname, i.starting_price)
+
 
 
 
