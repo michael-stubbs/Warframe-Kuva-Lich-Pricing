@@ -31,19 +31,15 @@ head
                         - wepname = wepname.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
                         th= wepname
                         th= i.item.damage
-                        th= i.item.element
+                        - let element = i.item.element
+                        - element = element.charAt(0).toUpperCase() + element.slice(1);
+                        th= element
                         th= i.item.having_ephemera
                         if i.item.quirk === "none" 
                             th= ""
                         else
                             th= i.item.quirk 
                         th= i.starting_price + " Plat"
-
-//- ul  
-//-     each i in data
-//-         li= i.item.weapon_url_name
-//-         li= i.item.damage
-//-         li= i.item.element
 
 
 

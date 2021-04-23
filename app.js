@@ -27,6 +27,7 @@ const compiledFunction = pug.compileFile("views/results.pug");
 app.post("/", async function (req, res) {
   let generatedGetString = process.formAPIString(req.body);
   await callAPI(generatedGetString);
+  console.log(generatedGetString);
   res.send(compiledFunction({ data: results }));
 });
 
@@ -56,9 +57,7 @@ function prepJSON(json) {
   json = json.payload.auctions;
   let jsonArray = [];
   for (let i = 0; i < json.length; i++) {
-    for (let f = 0; f < json.length; f++) {
-      jsonArray.push(json[f]);
-    }
+    jsonArray.push(json[i]);
   }
   return jsonArray;
 }
