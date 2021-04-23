@@ -27,6 +27,17 @@ function formAPIString(postedJSON) {
   return [apiLink, platformHead];
 }
 
+function prepJSON(json) {
+  json = JSON.parse(json);
+  json = json.payload.auctions;
+  let jsonArray = [];
+  for (let i = 0; i < json.length; i++) {
+    jsonArray.push(json[i]);
+  }
+  return jsonArray;
+}
+
 //exports vs module.exports doesn't seem to matter
 exports.omitBlanks = omitBlanks;
 exports.formAPIString = formAPIString;
+exports.prepJSON = prepJSON;

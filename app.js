@@ -7,7 +7,6 @@ const port = 3000;
 const path = require("path");
 const { response } = require("express");
 const process = require(__dirname + "/services/process.js");
-const fs = require("fs");
 
 const app = express();
 
@@ -22,23 +21,23 @@ app.listen(port, () => {
 
 let results;
 
-const compiledFunction = pug.compileFile("views/results.pug");
+const pugCompile = pug.compileFile("views/results.pug");
 
 app.post("/", async function (req, res) {
   let generatedGetString = process.formAPIString(req.body);
   await callAPI(generatedGetString);
   console.log(generatedGetString);
-  res.send(compiledFunction({ data: results }));
+  res.send(pugCompile({ data: results }));
 });
 
-// This wouldn't work as a module. Results would export before async finished.
+// Refuses to work as a module for some reason.
 async function callAPI(fullrequest) {
   try {
     await got(fullrequest[0], {
       "Platform: ": fullrequest[1],
       accept: "application/json",
     }).then((response) => {
-      results = prepJSON(response.body);
+      results = process.prepJSON(response.body);
     });
     //=> '<!doctype html> ...'
   } catch (error) {
@@ -46,18 +45,6 @@ async function callAPI(fullrequest) {
   }
 }
 
-//compiledFunction({item: json})
-// Need a loading icon and something to send back
-
 //Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-
-// TODO: move into Services module
-function prepJSON(json) {
-  json = JSON.parse(json);
-  json = json.payload.auctions;
-  let jsonArray = [];
-  for (let i = 0; i < json.length; i++) {
-    jsonArray.push(json[i]);
-  }
-  return jsonArray;
-}
+// TODO: require Auction Type and Platform in form
+// Add loading wheel or screen while processing API
