@@ -13,12 +13,12 @@ head
     title Kuva Lich Prices
 
 mixin modalButton(owner, wepname, price)
-    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#staticBackdrop') /w
-    #staticBackdrop.modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdropLabel' aria-hidden='true')
+    button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') /w
+    #mainModal.modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
         .modal-dialog
             .modal-content
                 .modal-header
-                    h5#staticBackdropLabel.modal-title Whisper Seller
+                    h5#backdropLabel.modal-title Whisper Seller
                     button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                 #copyBody.modal-body
                     | /w #{owner} Hi, I would like to buy your #{wepname} for #{price} plat. (warframe.market)

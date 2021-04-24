@@ -26,7 +26,6 @@ const pugCompile = pug.compileFile("views/results.pug");
 app.post("/", async function (req, res) {
   let generatedGetString = process.formAPIString(req.body);
   await callAPI(generatedGetString);
-  console.log(generatedGetString);
   res.send(pugCompile({ data: results }));
 });
 
