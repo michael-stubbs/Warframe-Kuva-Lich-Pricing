@@ -8,6 +8,14 @@ body {
   );
 }
 
+select {
+  background-color: #deeefc !important;
+}
+
+code {
+  color: black;
+}
+
 .title {
   margin-bottom: 1rem;
 }
@@ -18,7 +26,6 @@ body {
 }
 
 .searchBody {
-  /* margin: 15vh 20vh;*/
   width: 60%;
   margin: auto;
   margin-top: 6rem;
@@ -33,6 +40,13 @@ body {
 
 .searchWrapper {
   min-height: 79vh;
+}
+
+.resultsWrapper {
+  width: 90%;
+  margin: auto;
+  margin-top: 1rem;
+  padding: 1rem;
 }
 
 .col {
@@ -55,14 +69,6 @@ body {
 
 .footer {
   padding: 2rem 5rem;
-}
-
-select {
-  background-color: #deeefc !important;
-}
-
-code {
-  color: black;
 }
 
 .modal-content {
