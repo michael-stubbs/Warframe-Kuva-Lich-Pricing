@@ -61,6 +61,19 @@ select {
   background-color: #deeefc !important;
 }
 
+code {
+  color: black;
+}
+
+.modal-content {
+  background: rgb(148, 187, 233);
+  background: radial-gradient(
+    circle,
+    rgba(148, 187, 233, 1) 65%,
+    rgba(238, 174, 202, 1) 100%
+  );
+}
+
 @media only screen and (max-width: 980px) {
   .searchBody {
     margin: 0;

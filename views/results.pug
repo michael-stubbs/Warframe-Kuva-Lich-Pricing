@@ -21,7 +21,9 @@ mixin modalButton(owner, wepname, price)
                     h5#backdropLabel.modal-title Whisper Seller
                     button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
                 #copyBody.modal-body
-                    | /w #{owner} Hi, I would like to buy your #{wepname} for #{price} plat. (warframe.market)
+                    code
+                        mark
+                            | /w #{owner} Hi, I would like to buy your #{wepname} for #{price} plat. (warframe.market)
                 .modal-footer
                     button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
                     button#copyButton.btn.btn-primary(type='button') Copy
@@ -31,7 +33,7 @@ mixin modalButton(owner, wepname, price)
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
         h1.title Price Results 
-        table.resultsTable.table.striped
+        table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
             thead
                 tr
                     th(scope='col') Weapon
