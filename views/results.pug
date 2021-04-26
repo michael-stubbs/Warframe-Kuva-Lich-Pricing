@@ -70,6 +70,20 @@ mixin modalButton(owner, wepname, price)
                         td
                             +modalButton(i.owner.ingame_name, wepname, i.starting_price)
 
+    footer.footer.mt-auto.py-6
+        .row
+            .col.col-lg-2.col-md-0.col-sm-0
+            .col.col-lg-8.col-md-12.col-sm-12
+            p.copyright.text-muted
+                | Digital Extremes Ltd, Warframe and the logo Warframe are registered
+                | trademarks. All rights are reserved worldwide. This is a fansite and
+                | has no official link with Digital Extremes Ltd or Warframe.
+            .col.col-lg-2.col-md-0.col-sm-0
+        .btn-group(role='group' aria-label='Button group')
+            a.btn.btn-outline-success(href='https://github.com/michael-stubbs/Warframe-Kuva-Lich-Pricing' tabindex='-1' role='button' aria-disabled='true') Github
+            a.btn.btn-outline-success(href='https://twitter.com/__stubbs__' tabindex='-1' role='button' aria-disabled='true') Twitter
+
+
 .jumbotron.hidden
     h1.display-4 No results found!
     p.lead
