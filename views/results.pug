@@ -70,6 +70,16 @@ mixin modalButton(owner, wepname, price)
                         td
                             +modalButton(i.owner.ingame_name, wepname, i.starting_price)
 
+.jumbotron.hidden
+    h1.display-4 No results found!
+    p.lead
+        | Please try widening your search.
+    p
+        | Non-PC markets can sometimes be limited. 
+    button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
+        i(class="fas fa-arrow-circle-left fa-2x")
+
+
 
 
 

@@ -90,6 +90,16 @@ code {
   );
 }
 
+.jumbotron {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+
+.hidden {
+  display: none;
+}
+
 @media only screen and (max-width: 980px) {
   .searchBody {
     margin: 0;

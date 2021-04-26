@@ -16,4 +16,15 @@ function copyWhisper() {
   );
 }
 
-document.getElementById("copyButton").addEventListener("click", copyWhisper);
+// Prevent JS error if no results present
+let copyButton = document.getElementById("copyButton");
+if (copyButton !== null) {
+  copyButton.addEventListener("click", copyWhisper);
+}
+
+let tableBody = document.querySelector(".resultsTable");
+let jumbotron = document.querySelector(".jumbotron");
+if (tableBody.rows.length < 2) {
+  tableBody.deleteTHead();
+  jumbotron.classList.remove("hidden");
+}
