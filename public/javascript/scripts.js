@@ -1,19 +1,22 @@
-// Add error for pressing Search with no selected inputs
+function setUCfirst(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Clear select menu, add default with blank string value
+function clearDropdown(target, mainvar) {
+  target.length = 0;
+  let defaultOption = document.createElement("option");
+
+  defaultOption.text = setUCfirst(mainvar);
+  defaultOption.setAttribute("value", "");
+
+  target.add(defaultOption);
+  target.selectedi = 0;
+}
 
 function populateDropdown(type) {
   let dropdown = document.getElementById(type + "-type");
-
-  // Clear select menu, add default with blank string value
-  dropdown.length = 0;
-  let defaultOption = document.createElement("option");
-  function ucfirst(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-  defaultOption.text = ucfirst(type);
-  defaultOption.setAttribute("value", "");
-
-  dropdown.add(defaultOption);
-  dropdown.selectedi = 0;
+  clearDropdown(dropdown, type);
 
   // Hardcoded JSON, this should be changed later.
   // DE does not add new Kuva Lich features often.
