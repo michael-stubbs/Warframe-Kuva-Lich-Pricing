@@ -76,6 +76,11 @@ code {
   padding: 2px 5px;
 }
 
+.back-button {
+  margin-top: 0.5rem;
+  border: none;
+}
+
 .modal-content {
   background: rgb(148, 187, 233);
   background: radial-gradient(

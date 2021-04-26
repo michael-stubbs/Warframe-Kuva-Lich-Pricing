@@ -34,7 +34,13 @@ mixin modalButton(owner, wepname, price)
 
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
-        h1.title Price Results 
+        .row 
+            .col-lg-1.col-sm-1
+                button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
+                    i(class="fas fa-arrow-circle-left fa-2x")
+            .col-lg-10.col-sm-10
+                h1.title Price Results 
+            .col-lg-1.col-sm-1
         table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
             thead
                 tr
@@ -60,7 +66,7 @@ mixin modalButton(owner, wepname, price)
                             td= ""
                         else
                             td= i.item.quirk 
-                        td= i.starting_price + " Plat" 
+                        td= i.starting_price + " Plat"
                         td
                             +modalButton(i.owner.ingame_name, wepname, i.starting_price)
 
