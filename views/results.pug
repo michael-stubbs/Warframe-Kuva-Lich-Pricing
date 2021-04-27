@@ -14,12 +14,14 @@ head
     script(src='/javascript/results.js' defer='')
     title Kuva Lich Prices
 
-mixin modalButton(owner, wepname, price, ownerstatus)
+mixin modalButton(owner, wepname, price, ownerstatus, num)
+    - let dynamicIDname = "mainModal" + num 
+    - let dynamicIDNameWithPound = "#mainModal" + num
     if ownerstatus === "ingame"
-        button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') /w Buy
+        button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) /w Buy
     else 
-        button.whisper-button.offline.btn.btn-outline-danger(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') offline
-    #mainModal.modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
+        button.whisper-button.offline.btn.btn-outline-danger(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) offline
+    div(id = dynamicIDname).modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
         .modal-dialog
             .modal-content
                 .modal-header
@@ -57,8 +59,10 @@ mixin modalButton(owner, wepname, price, ownerstatus)
                     th(scope='col') Price
                     th(scope='col') Whisper
             tbody
+                - let iterNum = 0
                 each i in data 
                     tr 
+                        - iterNum = iterNum + 1
                         - let wepname = i.item.weapon_url_name.replace(/_/g, ' ');
                         - wepname = wepname.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
                         td= wepname
@@ -73,7 +77,7 @@ mixin modalButton(owner, wepname, price, ownerstatus)
                             td= i.item.quirk 
                         td= i.starting_price + " Plat"
                         td
-                            +modalButton(i.owner.ingame_name, wepname, i.starting_price, i.owner.status)
+                            +modalButton(i.owner.ingame_name, wepname, i.starting_price, i.owner.status, iterNum)
 
     footer.footer.mt-auto.py-6
         .row
