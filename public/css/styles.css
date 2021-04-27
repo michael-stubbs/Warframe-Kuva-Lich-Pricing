@@ -57,11 +57,11 @@ code {
 .search-button {
   margin-top: 3rem;
   margin-bottom: 2rem;
-  background-color: #2a65ff;
+  background-color: #893dff;
 }
 
 .search-button:hover {
-  background-color: #893dff;
+  background-color: #a56bff;
 }
 
 .logo {
@@ -81,6 +81,10 @@ code {
   border: none;
 }
 
+.back-button:hover {
+  background-color: transparent;
+}
+
 .modal-content {
   background: rgb(148, 187, 233);
   background: radial-gradient(
@@ -98,6 +102,34 @@ code {
 
 .hidden {
   display: none;
+}
+
+.message-seller {
+  margin-left: 0.5rem;
+}
+
+.seller-icon {
+  color: #893dff;
+}
+
+.offline-toggle {
+  margin-top: 1rem;
+  padding: 4px;
+  font-size: medium;
+  background-color: #893dff;
+  color: white;
+}
+
+.offline-toggle:hover {
+  background-color: #a56bff;
+}
+
+.back-icon {
+  color: #893dff;
+}
+
+.back-icon:hover {
+  color: #a56bff;
 }
 
 @media only screen and (max-width: 980px) {

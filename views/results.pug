@@ -22,8 +22,8 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
         button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) /w Buy
     else 
         button.whisper-button.offline.btn.btn-outline-danger(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) offline
-    a(href=ownerID target="_blank")
-        i(class="far fa-comments")
+    a.message-seller(href=ownerID target="_blank")
+        i(class="fas fa-comments seller-icon")
     div(id = dynamicIDname).modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
         .modal-dialog
             .modal-content
@@ -43,14 +43,14 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
         .row 
-            .col-lg-1.col-sm-1
+            .col-lg-2.col-sm-2
                 button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
-                    i(class="fas fa-arrow-circle-left fa-2x")
-            .col-lg-10.col-sm-10
+                    i(class="fas fa-arrow-circle-left fa-2x back-icon")
+            .col-lg-8.col-sm-8
                 h1.title Price Results 
-            .col-lg-1.col-sm-1
+            .col-lg-2.col-sm-2
                 button#hide-offline.btn.offline-toggle.btn-danger(type="button") Hide Offline
-                button#show-offline.btn.offline-toggle.btn-warning.hidden(type="button") Show Offline
+                button#show-offline.btn.offline-toggle.btn-info.hidden(type="button") Show Offline
         table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
             thead
                 tr
@@ -73,7 +73,10 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
                         - let element = i.item.element
                         - element = element.charAt(0).toUpperCase() + element.slice(1);
                         td= element
-                        td= i.item.having_ephemera
+                        if i.item.having_ephemera === false
+                            td= "No"
+                        else 
+                            td= "Yes"
                         if i.item.quirk === "none" 
                             td= ""
                         else
