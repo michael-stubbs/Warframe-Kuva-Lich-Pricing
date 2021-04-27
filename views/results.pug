@@ -15,12 +15,15 @@ head
     title Kuva Lich Prices
 
 mixin modalButton(owner, wepname, price, ownerstatus, num)
+    - let ownerID = "https://warframe.market/profile/" + owner 
     - let dynamicIDname = "mainModal" + num 
     - let dynamicIDNameWithPound = "#mainModal" + num
     if ownerstatus === "ingame"
         button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) /w Buy
     else 
         button.whisper-button.offline.btn.btn-outline-danger(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) offline
+    a(href=ownerID target="_blank")
+        i(class="far fa-comments")
     div(id = dynamicIDname).modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
         .modal-dialog
             .modal-content
