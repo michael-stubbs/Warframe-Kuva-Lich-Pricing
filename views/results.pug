@@ -14,8 +14,11 @@ head
     script(src='/javascript/results.js' defer='')
     title Kuva Lich Prices
 
-mixin modalButton(owner, wepname, price)
-    button.whisper-button.btn.btn-primary(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') /w
+mixin modalButton(owner, wepname, price, ownerstatus)
+    if ownerstatus === "ingame"
+        button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') /w Buy
+    else 
+        button.whisper-button.offline.btn.btn-outline-danger(type='button' data-bs-toggle='modal' data-bs-target='#mainModal') offline
     #mainModal.modal.fade(data-bs-keyboard='false' tabindex='-1' aria-labelledby='backdropLabel' aria-hidden='true')
         .modal-dialog
             .modal-content
@@ -41,6 +44,8 @@ mixin modalButton(owner, wepname, price)
             .col-lg-10.col-sm-10
                 h1.title Price Results 
             .col-lg-1.col-sm-1
+                button#hide-offline.btn.btn-danger(type="button") Hide Offline
+                button#show-offline.btn.btn-warning.hidden(type="button") Show Offline
         table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
             thead
                 tr
@@ -68,7 +73,7 @@ mixin modalButton(owner, wepname, price)
                             td= i.item.quirk 
                         td= i.starting_price + " Plat"
                         td
-                            +modalButton(i.owner.ingame_name, wepname, i.starting_price)
+                            +modalButton(i.owner.ingame_name, wepname, i.starting_price, i.owner.status)
 
     footer.footer.mt-auto.py-6
         .row
