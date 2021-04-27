@@ -18,7 +18,15 @@ code {
 }
 
 .title {
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+  font-size: 3rem;
+}
+
+.results-title {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-size: 3rem;
 }
 
 .subhead {
@@ -46,8 +54,20 @@ code {
 .resultsWrapper {
   width: 90%;
   margin: auto;
-  margin-top: 1rem;
+  margin-top: 2rem;
   padding: 1rem;
+  padding-top: 0;
+}
+
+.resultsTable {
+  background: rgb(222, 238, 252);
+  background: linear-gradient(
+    180deg,
+    rgba(222, 238, 252, 1) 27%,
+    rgba(169, 209, 254, 1) 54%,
+    rgba(148, 187, 233, 1) 84%,
+    rgba(238, 174, 202, 1) 100%
+  );
 }
 
 .col {
@@ -77,7 +97,7 @@ code {
 }
 
 .back-button {
-  margin-top: 0.5rem;
+  margin-top: 1.7rem;
   border: none;
 }
 
@@ -92,6 +112,15 @@ code {
     rgba(148, 187, 233, 1) 65%,
     rgba(238, 174, 202, 1) 100%
   );
+}
+
+.head-section {
+  background-image: radial-gradient(
+      circle,
+      rgba(0, 0, 0, 1) 20%,
+      rgba(0, 0, 0, 0) 80%
+    ),
+    url(space_banner.jpg);
 }
 
 .jumbotron {
@@ -113,15 +142,21 @@ code {
 }
 
 .offline-toggle {
-  margin-top: 1rem;
+  margin-top: 2.2rem;
   padding: 4px;
   font-size: medium;
   background-color: #893dff;
   color: white;
+  border-color: #893dff;
 }
 
 .offline-toggle:hover {
   background-color: #a56bff;
+  border-color: #a56bff;
+}
+
+thead {
+  background-color: #a9d1fe;
 }
 
 .back-icon {

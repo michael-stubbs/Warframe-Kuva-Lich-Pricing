@@ -42,16 +42,16 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
 
 .resultsWrapper
     .resultsBody.container-flex.shadow.rounded
-        .row 
+        .row.head-section
             .col-lg-2.col-sm-2
                 button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
                     i(class="fas fa-arrow-circle-left fa-2x back-icon")
             .col-lg-8.col-sm-8
-                h1.title Price Results 
+                h1.results-title Price Results 
             .col-lg-2.col-sm-2
                 button#hide-offline.btn.offline-toggle.btn-danger(type="button") Hide Offline
                 button#show-offline.btn.offline-toggle.btn-info.hidden(type="button") Show Offline
-        table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
+        table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary.table-hover
             thead
                 tr
                     th(scope='col') Weapon
