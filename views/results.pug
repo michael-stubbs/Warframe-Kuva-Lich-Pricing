@@ -77,10 +77,12 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
                             td= "No"
                         else 
                             td= "Yes"
-                        if i.item.quirk === "none" 
+                        if i.item.quirk === "none" || i.item.quirk === undefined
                             td= ""
                         else
-                            td= i.item.quirk 
+                            - let itemQuirk = i.item.quirk.replace(/_/g, ' ');
+                            - itemQuirk = itemQuirk.toLowerCase().split(' ').map((s) => s.charAt(0).toUpperCase() + s.substring(1)).join(' ');
+                            td= itemQuirk
                         td= i.starting_price + " Plat"
                         td
                             +modalButton(i.owner.ingame_name, wepname, i.starting_price, i.owner.status, iterNum)
