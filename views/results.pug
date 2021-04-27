@@ -46,8 +46,8 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
             .col-lg-10.col-sm-10
                 h1.title Price Results 
             .col-lg-1.col-sm-1
-                button#hide-offline.btn.btn-danger(type="button") Hide Offline
-                button#show-offline.btn.btn-warning.hidden(type="button") Show Offline
+                button#hide-offline.btn.offline-toggle.btn-danger(type="button") Hide Offline
+                button#show-offline.btn.offline-toggle.btn-warning.hidden(type="button") Show Offline
         table.resultsTable.table.table-sm.table-striped.table-bordered.border-secondary
             thead
                 tr
