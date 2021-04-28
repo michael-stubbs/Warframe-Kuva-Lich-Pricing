@@ -3,11 +3,12 @@ const bodyParser = require("body-parser");
 const pug = require("pug");
 const cors = require("cors");
 const got = require("got");
-const port = 80;
 const path = require("path");
 const { response } = require("express");
 const process = require(__dirname + "/Services/process.js");
 const helmet = require("helmet");
+const server = require("http").createServer();
+const port = process.env.PORT || 3000;
 
 const app = express();
 
@@ -17,9 +18,7 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(helmet());
 
-app.listen(port, () => {
-  console.log("Server is running on port " + port);
-});
+server.listen(port, () => console.log(`Listening on ${port}`));
 
 let results;
 
