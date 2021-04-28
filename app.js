@@ -33,6 +33,7 @@ app.use(
         "fonts.googleapis.com",
       ],
       scriptSrc: ["'self'", "cdnjs.cloudflare.com"],
+      imgSrc: ["'self'", "w3.com"],
     },
   })
 );

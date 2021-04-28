@@ -1,8 +1,11 @@
-function copyWhisper() {
-  let body = document.getElementById("copyBody");
-  let button = document.getElementById("copyButton");
-  body = body.innerHTML;
-  document.execCommand("copy");
+function copyWhisper(event) {
+  let button = event.target;
+  let buttonID = Number(button.id.slice(-2));
+  if (isNaN(buttonID) === true) {
+    buttonID = button.id.slice(-1);
+  }
+  let body = document.getElementById("copyBody" + buttonID);
+  body = body.innerText;
   navigator.clipboard.writeText(body).then(
     function () {
       button.innerHTML = "Copied!";
@@ -10,16 +13,16 @@ function copyWhisper() {
         button.innerHTML = "Copy";
       }, 1300);
     },
-    function () {
-      /* clipboard write failed */
-    }
+    function () {}
   );
 }
 
 // Prevent JS error if no results present
-let copyButton = document.getElementById("copyButton");
-if (copyButton !== null) {
-  copyButton.addEventListener("click", copyWhisper);
+let copyButton = document.querySelectorAll(".copyButton");
+for (let i = 0; i < copyButton.length; i++) {
+  if (copyButton[i] !== null) {
+    copyButton[i].addEventListener("click", copyWhisper);
+  }
 }
 
 let tableBody = document.querySelector(".resultsTable");

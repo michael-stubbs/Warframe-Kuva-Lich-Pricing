@@ -17,6 +17,8 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
     - let ownerID = "https://warframe.market/profile/" + owner 
     - let dynamicIDname = "mainModal" + num 
     - let dynamicIDNameWithPound = "#mainModal" + num
+    - let dynamicCopyBody = "copyBody" + num
+    - let dynamicCopyButton = "copyButton" + num
     if ownerstatus === "ingame"
         button.whisper-button.online.btn.btn-success(type='button' data-bs-toggle='modal' data-bs-target=dynamicIDNameWithPound) /w Buy
     else 
@@ -27,15 +29,15 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
         .modal-dialog
             .modal-content
                 .modal-header
-                    h5#backdropLabel.modal-title Whisper Seller
+                    h5.backdropLabel.modal-title Whisper Seller
                     button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
-                #copyBody.modal-body
+                div(id = dynamicCopyBody).modal-body
                     code
                         mark
                             | /w #{owner} Hi, I would like to buy your #{wepname} for #{price} plat. (warframe.market)
                 .modal-footer
                     button.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
-                    button#copyButton.btn.btn-primary(type='button') Copy
+                    button(id = dynamicCopyButton).copyButton.btn.btn-primary(type='button') Copy
 
 
 
@@ -86,6 +88,15 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
                         td
                             +modalButton(i.owner.ingame_name, wepname, i.starting_price, i.owner.status, iterNum)
 
+    .jumbotron.hidden
+        h1.display-4 No results found!
+        p.lead
+            | Please try widening your search.
+        p
+            | Non-PC markets can sometimes be limited. 
+        button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
+            i(class="fas fa-arrow-circle-left fa-2x back-icon")
+
     footer.footer.mt-auto.py-6
         .row
             .col.col-lg-2.col-md-0.col-sm-0
@@ -100,14 +111,7 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
             a.btn.btn-outline-success(href='https://twitter.com/__stubbs__' tabindex='-1' role='button' aria-disabled='true' target="_blank") Twitter
 
 
-.jumbotron.hidden
-    h1.display-4 No results found!
-    p.lead
-        | Please try widening your search.
-    p
-        | Non-PC markets can sometimes be limited. 
-    button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
-        i(class="fas fa-arrow-circle-left fa-2x")
+
 
 
 
