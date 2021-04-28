@@ -1,3 +1,4 @@
+console.log("this script is functional");
 function setUCfirst(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
