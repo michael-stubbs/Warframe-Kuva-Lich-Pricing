@@ -1,6 +1,9 @@
 {
   "name": "wf-klp-fs",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.16.1"
+  },
   "description": "Warframe Kuva Lich Pricer",
   "main": "app.js",
   "scripts": {
@@ -13,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "got": "^11.8.2",
+    "helmet": "^4.5.0",
     "pug": "^3.0.2"
   },
   "devDependencies": {

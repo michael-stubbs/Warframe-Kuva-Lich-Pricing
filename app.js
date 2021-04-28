@@ -7,6 +7,7 @@ const port = 3000;
 const path = require("path");
 const { response } = require("express");
 const process = require(__dirname + "/services/process.js");
+const helmet = require("helmet");
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static("public"));
+app.use(helmet());
 
 app.listen(port, () => {
   console.log("Server is running on port " + port);
