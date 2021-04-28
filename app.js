@@ -23,6 +23,15 @@ app.get("/", function (req, res) {
   res.sendFile("/views/index.html", { root: __dirname });
 });
 
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "*cdnjs.cloudflare.com*"],
+    },
+  })
+);
+
 let results;
 
 const pugCompile = pug.compileFile(path.join(__dirname + "/views/results.pug"));
