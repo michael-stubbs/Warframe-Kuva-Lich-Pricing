@@ -45,7 +45,7 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
     .resultsBody.container-flex.shadow.rounded
         .row.head-section
             .col-lg-2.col-sm-2
-                button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
+                button.btn.back-button.btn-outline-primary(type='button')
                     i(class="fas fa-arrow-circle-left fa-2x back-icon")
             .col-lg-8.col-sm-8
                 h1.results-title Price Results 
@@ -94,7 +94,7 @@ mixin modalButton(owner, wepname, price, ownerstatus, num)
             | Please try widening your search.
         p
             | Non-PC markets can sometimes be limited. 
-        button.btn.back-button.btn-outline-primary(type='button' onclick="history.back(-1)")
+        button.btn.back-button.btn-outline-primary(type='button')
             i(class="fas fa-arrow-circle-left fa-2x back-icon")
 
     footer.footer.mt-auto.py-6

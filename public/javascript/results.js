@@ -61,3 +61,13 @@ function showOffline() {
 
 document.getElementById("hide-offline").addEventListener("click", hideOffline);
 document.getElementById("show-offline").addEventListener("click", showOffline);
+
+function goBack() {
+  history.go(-1);
+  return false;
+}
+
+let backButtons = document.getElementsByClassName("back-button");
+for (let index = 0; index < backButtons.length; index++) {
+  backButtons[index].addEventListener("click", goBack);
+}
