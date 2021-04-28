@@ -20,7 +20,7 @@ app.use(helmet());
 
 server.listen(port, () => console.log(`Listening on ${port}`));
 
-app.get("/", function (req, res) {
+server.get("/", function (req, res) {
   // res.sendFile("/views/index.html", { root: process.env.PWD });
   res.send(console.log(process.env.PWD));
 });
