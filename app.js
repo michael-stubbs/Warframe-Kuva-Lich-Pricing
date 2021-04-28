@@ -5,7 +5,7 @@ const cors = require("cors");
 const got = require("got");
 const path = require("path");
 const { response } = require("express");
-const processData = require(__dirname + "/Services/process.js");
+const processData = require(process.env.PWD + "/Services/process.js");
 const helmet = require("helmet");
 const server = require("http").createServer();
 const port = process.env.PORT || 3000;
@@ -21,12 +21,13 @@ app.use(helmet());
 server.listen(port, () => console.log(`Listening on ${port}`));
 
 app.get("/", function (req, res) {
-  res.sendFile("/views/index.html", { root: process.env.PWD });
+  // res.sendFile("/views/index.html", { root: process.env.PWD });
+  res.send(console.log(process.env.PWD));
 });
 
 let results;
 
-const pugCompile = pug.compileFile("views/results.pug");
+const pugCompile = pug.compileFile(process.env.PWD + "/views/results.pug");
 
 app.post("/", async function (req, res) {
   let generatedGetString = processData.formAPIString(req.body);
@@ -50,5 +51,3 @@ async function callAPI(fullrequest) {
 }
 
 //Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-// TODO: require Auction Type and Platform in form
-// Add loading wheel or screen while processing API

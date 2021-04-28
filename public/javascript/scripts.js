@@ -20,7 +20,7 @@ function populateDropdown(type) {
 
   // Hardcoded JSON, this should be changed later.
   // DE does not add new Kuva Lich features often.
-  const url = "data/lich_" + type + "s.json";
+  const url = "/data/lich_" + type + "s.json";
 
   fetch(url)
     .then(function (response) {
