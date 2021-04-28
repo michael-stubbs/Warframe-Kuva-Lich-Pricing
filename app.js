@@ -5,9 +5,8 @@ const cors = require("cors");
 const got = require("got");
 const path = require("path");
 const { response } = require("express");
-const processData = require(process.env.PWD + "/Services/process.js");
+const processData = require(path.join(__dirname + "/services/process.js"));
 const helmet = require("helmet");
-const server = require("http").createServer();
 const port = process.env.PORT || 3000;
 
 const app = express();
@@ -18,16 +17,16 @@ app.use(cors());
 app.use(express.static("public"));
 app.use(helmet());
 
-server.listen(port, () => console.log(`Listening on ${port}`));
+app.listen(port, () => console.log(`Listening on ${port}`));
 
 app.get("/", function (req, res) {
-  // res.sendFile("/views/index.html", { root: process.env.PWD });
-  res.send("GET request to the homepage" + process.env.PWD);
+  // res.sendFile("/views/index.html", { root: __dirname });
+  res.send("GET request to the homepage" + __dirname);
 });
 
 let results;
 
-const pugCompile = pug.compileFile(process.env.PWD + "/views/results.pug");
+const pugCompile = pug.compileFile(path.join(__dirname + "/views/results.pug"));
 
 app.post("/", async function (req, res) {
   let generatedGetString = processData.formAPIString(req.body);
