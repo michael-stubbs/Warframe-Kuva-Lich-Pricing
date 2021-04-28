@@ -26,7 +26,12 @@ app.get("/", function (req, res) {
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: ["'self'", "cdnjs.cloudflare.com", "fonts.googleapis.com"],
+      defaultSrc: [
+        "'self'",
+        "cdnjs.cloudflare.com",
+        "fonts.gstatic.com",
+        "fonts.googleapis.com",
+      ],
       scriptSrc: ["'self'", "cdnjs.cloudflare.com"],
     },
   })
