@@ -166,7 +166,7 @@ code {
   border-color: #a56bff;
 }
 
-@media only screen and (max-width: 980px) {
+@media only screen and (max-width: 991.98px) {
   .searchBody {
     width: 90%;
     margin-top: 1rem;
@@ -174,5 +174,94 @@ code {
 
   .offline-toggle {
     margin-top: 1.5rem;
+  }
+
+  .resultsWrapper {
+    margin: 0 !important;
+    padding: 0;
+  }
+  .results-title {
+    font-size: 2rem;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0;
+  }
+  .offline-toggle {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .back-button {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .resultsBody {
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  /* Index page */
+  .searchBody {
+    margin-top: 0.6rem;
+    padding-top: 0.5rem;
+    width: 95%;
+  }
+  .row {
+    display: block;
+  }
+  .logo {
+    width: 50%;
+    height: 50%;
+  }
+  .title {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .subhead {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  .search-button {
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .col {
+    padding: 0.3rem;
+  }
+
+  /* Results page */
+
+  .head-section {
+    margin: auto;
+    width: 121%;
+  }
+  .results-title {
+    margin: auto;
+    font-size: 2rem;
+  }
+  .resultsTable {
+    font-size: 0.8rem;
+  }
+  .whisper-button {
+    font-size: 0.7rem;
+  }
+  .back-button {
+    margin: auto;
+    margin-top: 0.7rem;
+  }
+
+  .offline-toggle {
+    margin: 0.7rem;
+  }
+  table {
+    width: auto !important;
+  }
+  .footer {
+    width: 121%;
   }
 }
