@@ -6,7 +6,7 @@ const got = require("got");
 const port = 80;
 const path = require("path");
 const { response } = require("express");
-const process = require("/Services/process.js");
+const process = require(__dirname + "/Services/process.js");
 const helmet = require("helmet");
 
 const app = express();
