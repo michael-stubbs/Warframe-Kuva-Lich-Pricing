@@ -5,7 +5,7 @@ const cors = require("cors");
 const got = require("got");
 const path = require("path");
 const { response } = require("express");
-const processData = require(path.join(__dirname + "/services/process.js"));
+const processData = require(path.join(__dirname + "/Services/process.js"));
 const helmet = require("helmet");
 const port = process.env.PORT || 3000;
 
