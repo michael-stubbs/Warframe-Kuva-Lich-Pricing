@@ -20,6 +20,10 @@ app.use(helmet());
 
 server.listen(port, () => console.log(`Listening on ${port}`));
 
+app.get("/", function (req, res) {
+  res.sendFile("views/index.html", { root: __dirname });
+});
+
 let results;
 
 const pugCompile = pug.compileFile("views/results.pug");
