@@ -84,6 +84,10 @@ code {
   background-color: #a56bff;
 }
 
+.search-button:active {
+  background-color: #a56bff;
+}
+
 .logo {
   display: inline-block;
 }
@@ -169,6 +173,11 @@ thead {
 
 @media only screen and (max-width: 980px) {
   .searchBody {
-    margin: 0;
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .offline-toggle {
+    margin-top: 1.5rem;
   }
 }
