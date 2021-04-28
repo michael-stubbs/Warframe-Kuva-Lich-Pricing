@@ -5,7 +5,7 @@ const cors = require("cors");
 const got = require("got");
 const path = require("path");
 const { response } = require("express");
-const process = require(__dirname + "/Services/process.js");
+const processData = require(__dirname + "/Services/process.js");
 const helmet = require("helmet");
 const server = require("http").createServer();
 const port = process.env.PORT || 3000;
@@ -25,7 +25,7 @@ let results;
 const pugCompile = pug.compileFile("views/results.pug");
 
 app.post("/", async function (req, res) {
-  let generatedGetString = process.formAPIString(req.body);
+  let generatedGetString = processData.formAPIString(req.body);
   await callAPI(generatedGetString);
   res.send(pugCompile({ data: results }));
 });
@@ -37,7 +37,7 @@ async function callAPI(fullrequest) {
       "Platform: ": fullrequest[1],
       accept: "application/json",
     }).then((response) => {
-      results = process.prepJSON(response.body);
+      results = processData.prepJSON(response.body);
     });
     //=> '<!doctype html> ...'
   } catch (error) {
