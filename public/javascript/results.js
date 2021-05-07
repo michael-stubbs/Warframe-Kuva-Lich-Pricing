@@ -1,5 +1,7 @@
 function copyWhisper(event) {
   let button = event.target;
+
+  // Currently only allows for <100 results
   let buttonID = Number(button.id.slice(-2));
   if (isNaN(buttonID) === true) {
     buttonID = button.id.slice(-1);
@@ -32,7 +34,7 @@ if (tableBody.rows.length < 2) {
   jumbotron.classList.remove("hidden");
 }
 
-// Extremely rough way to process hiding/removing entries the table.
+// Extremely rough way to process hiding/showing entries the table.
 function hideOffline() {
   let whisperButton = document.querySelectorAll(".whisper-button");
   for (let i = 0; i < whisperButton.length; i++) {
